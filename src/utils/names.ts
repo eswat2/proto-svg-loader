@@ -3,7 +3,7 @@ import { icons, ikons } from 'proto-ikons-wc';
 const names = {
   icons: [],
   ikons: [],
-}
+};
 
 icons.map(label => {
   names.icons.push(label.slice(0, -5));
