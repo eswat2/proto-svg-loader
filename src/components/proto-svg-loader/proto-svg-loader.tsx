@@ -22,12 +22,13 @@ const getIcon = (label: string) => {
 export class ProtoSvgLoader {
   @Prop() hex: string = 'currentColor';
   @Prop() name: string = 'slug';
+  @Prop() selected: boolean = false;
   @Prop() size: number = undefined;
 
   @Element() el: HTMLElement;
 
   render() {
-    const { name, hex, size } = this;
+    const { name, hex, selected, size } = this;
 
     // NOTE:  we are explicitly setting undefined if no size is provided...
     this.el.style.setProperty(
@@ -39,7 +40,7 @@ export class ProtoSvgLoader {
 
     return (
       <div class="ikonBox">
-        <Tag hex={hex} size={size} />
+        <Tag hex={hex} selected={selected} size={size} />
       </div>
     );
   }

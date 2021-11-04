@@ -9,6 +9,7 @@ export namespace Components {
     interface ProtoSvgLoader {
         "hex": string;
         "name": string;
+        "selected": boolean;
         "size": number;
     }
 }
@@ -27,6 +28,7 @@ declare namespace LocalJSX {
     interface ProtoSvgLoader {
         "hex"?: string;
         "name"?: string;
+        "selected"?: boolean;
         "size"?: number;
     }
     interface IntrinsicElements {
